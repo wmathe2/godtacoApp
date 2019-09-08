@@ -10,20 +10,31 @@ export class HomePage {
   private answers = ["Tio Javi's",'Mestizo','Superior Grill',"Fuzzy's Taco Shop", "Zippy's",
   'Caliente Mexican Craving', "Izzo's Illegal Burrito",'La Carreta', 'Las Palmas', 'Chipotle']
 
-  constructor(private toastCtrl: ToastController) {}
+    constructor(private toastCtrl: ToastController) {}
 
-  giveAnswer() {
-    let answer = this.answers[Math.floor(Math.random() * this.answers.length)];
-    this.presentToast(answer);
+    giveAnswer() {
+      this.cssClass = "animated shake";
+      let answer = this.answers[Math.floor(Math.random() * this.answers.length)];
+      // this.presentToast(answer);
+
+      var temp = this;
+      setTimeout(function(){
+        temp.presentToast(answer);
+      }, 2000)
+    }
+
+    async presentToast(answer) {
+      const toast = await this.toastCtrl.create({
+        message: answer,
+        duration: 5000,
+        position: 'bottom'
+      });
+
+      toast.onDidDismiss().then(() => {
+        console.log('toast dismissed');
+        this.cssClass = "";
+      });
+      toast.present();
+    }
+
   }
-
-  async presentToast(answer) {
-    const toast = await this.toastCtrl.create({
-      message: answer,
-      duration: 10000,
-      position: 'bottom'
-    });
-    toast.present();
-  }
-
-}

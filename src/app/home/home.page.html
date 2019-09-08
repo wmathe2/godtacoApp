@@ -9,12 +9,12 @@
 <ion-content padding>
   <ion-card (click)="giveAnswer()">
 
-    <ion-card-header>
-      Are you hungry?
-    </ion-card-header>
+      <ion-card-header>
+        Are you hungry?
+      </ion-card-header>
 
     <ion-card-content>
-      <img src="assets/taco.png" alt="taco">
+      <img src="assets/taco.png" [ngClass]="cssClass" alt="godTaco">
     </ion-card-content>
 
     <ion-card-header>
