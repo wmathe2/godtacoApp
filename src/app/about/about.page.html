@@ -1,16 +1,27 @@
 <ion-header>
   <ion-toolbar>
-    <ion-button href='/home'>
-      Home
-      <ion-icon name="home"></ion-icon>
-    </ion-button>
-    <ion-title>About</ion-title>
+    <ion-title class="serif">
+      About
+    </ion-title>
+    <ion-buttons>
+      <ion-button routerLink='/' routerDirection="back">
+        Home
+        <ion-icon name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <header>
-    The GodTaco is an app that provides the user with a random, but highly rated mexican restaurant in the
-    Baton Rouge area. (WARNING: Do not use this app if you do not like spontaneity.)
-  </header>
+<ion-content padding-horizontal>
+  <h1 class="serif">
+    What is the GodTaco?
+  </h1>
+  <div class="container">
+      <img class="sombrero" src='assets/sombrero.png' alt='sombrero' style="width:100%;">
+      <div class="text">The GodTaco is an app that provides the user with a random, but highly
+        rated mexican restaurant in the Baton Rouge area.
+        <br><br>
+        (WARNING: Do not use this app if you do not like spontaneity.)
+      </div>
+  </div>
 </ion-content>

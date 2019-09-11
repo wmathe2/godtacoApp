@@ -1,29 +1,27 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
+    <ion-title class='serif'>
       The God Taco
     </ion-title>
-    <ion-button href='/about'>
-        About
-        <ion-icon name="information-circle-outline"></ion-icon>
-    </ion-button>
+    <ion-buttons>
+      <ion-button routerLink='/about' routerDirection="forward">
+          About
+          <ion-icon name="information-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
   <ion-card (click)="giveAnswer()">
 
-      <ion-card-header>
+      <ion-card-header class='serif'>
         Are you hungry?
       </ion-card-header>
 
     <ion-card-content>
       <img src="assets/taco.png" [ngClass]="cssClass" alt="godTaco">
+        Tap the taco to find a mexican restaurant to eat at.
     </ion-card-content>
-
-    <ion-card-header>
-      Tap the taco to find a mexican restaurant to eat at.
-    </ion-card-header>
-
   </ion-card>
 </ion-content>

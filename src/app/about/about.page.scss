@@ -1,0 +1,36 @@
+ion-title{
+  --color:#d68160;
+  font-weight:bold;
+  font-size: 30px;
+}
+
+.serif{
+  font-family:serif;
+}
+
+ion-content{
+  --background: rgba(255,223,79,0.75);
+}
+
+ion-card{
+  --background:#ffffff;
+}
+
+ion-card-header{
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.container{
+    position: relative;
+}
+
+.sombrero{
+  opacity: 0.3;
+}
+
+.text {
+  position: absolute;
+  top: 12px;
+  left: 5px;
+}
